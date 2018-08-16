@@ -1,0 +1,16 @@
+agents:
+- type: GeneratePacket
+  count: 5
+  connect: SomeAgent
+
+- name: SomeAgent
+  type: Print
+  text: Hello World!
+
+- whatever: 5
+  connect:
+    - out -> SomeAgent.in
+    - AnotherAgent
+
+
+
